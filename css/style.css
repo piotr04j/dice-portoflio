@@ -30,10 +30,29 @@ button {
     from {color: white;}
     to {color: red;}
 }
+@keyframes win {
+	from {
+		transform: scale(1.2);
+		color: red;
+	} 
+	50% {
+		color: blue;
+		transform: scale(1.1);
+	}
+	to {
+		transform: scale(1);
+		transform: rotate(-360deg);
+		color: red;
+	}
+}
 .active {
 	animation-name: anim;
 	animation-duration: 1s;
 	animation-iteration-count: infinite;
+}
+
+.winner {
+	animation: win 1s infinite;
 }
 /* ----------------- general ----------------------- */
 
@@ -143,6 +162,7 @@ footer a {
 	.instruction {
 		display: none;
 		position: relative;
+		height: 100%;
 		top: 0;
 		left: 0;
 		background-color: red;

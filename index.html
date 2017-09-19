@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="JavaScript, CSS3, HTML5, game, RWD, Brackets">
+	<meta name="author" content="Piotr Jałocha">
+	<title>Dices</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div class="container">
+		
+		<button class="button__instruction">instruction</button>
+		
+
+		<div class="instruction">
+			<h2>Pig dice</h2>
+			<p>Pig dice is a dice game for two players with simple rules. </p>
+			<h3>Rules:</h3>
+			<ul>
+				<li>
+					If the player rolls number from 2 to 6, it is added to their turn points and player can continue turn.
+				</li>
+				<li>
+					After rolls player can click hold and add turn points to score.
+				</li>
+				<li>
+					If roll 1, player lose turn point and it start the next player's turn.
+				</li>
+				<li>
+					The first player who gain 100 points win game. 
+				</li>
+			</ul>
+		</div>
+		
+		<button class="button__new">new game</button>	
+		
+		<div class="player--one player active" id="js-player-0">
+			<p class="player__name">name 1</p>
+			<p class="player__scrore">score: <span id="score-0">0</span></p>
+			<p class="player__scrore__current">current: </p>
+		</div>
+		
+		<img src="img/1.png" alt="dice"  class="dice">
+		
+		<div class="player--two player" id="js-player-1">
+			<p class="player__name">name 2</p>
+			<p class="player__scrore">score: <span id="score-0">0</span></p>
+			<p class="player__scrore__current">current: </p>
+		</div>
+		
+		<button class="button__roll">roll</button>
+		<button class="button__hold">hold</button>
+		
+	</div>	
+	<footer>Icon made by <a href="https://smashicons.com/" target="_blank">Smashicons</a> from <a href="https://www.flaticon.com/" target="_blank">www.flaticon.com</a> </footer>
+	<script src="scitps/script.js"></script>
+</body>
+</html>

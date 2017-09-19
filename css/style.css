@@ -1,0 +1,209 @@
+/* ----------------- fonts ----------------------- */
+
+@import url('https://fonts.googleapis.com/css?family=VT323');
+
+/* ----------------- general ----------------------- */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	font: 16px VT323, monospace;
+	color: #fff;
+}
+
+button {
+	min-width: 150px;
+	padding: 8px 15px;
+	background: red;
+	border: 2px solid #fff;
+	border-radius: 20%;
+	color: #fff;
+	font-size: 26px;
+	cursor: pointer;
+	outline: none;
+}
+
+@keyframes anim {
+    from {color: white;}
+    to {color: red;}
+}
+.active {
+	animation-name: anim;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
+/* ----------------- general ----------------------- */
+
+.container {
+	background: url('../img/bg.jpg') no-repeat center/cover;
+	height: 100vh;
+	position: relative;
+}
+
+.instruction {
+	display: none;
+	position: absolute;
+	top: 20%;
+	left: 10%;
+	background-color: rgba(0,0,0,.7);
+	z-index: 10;
+	padding: 20px;
+	font-size: 18px;
+}
+
+.button__instruction {
+	margin: 50px;
+}
+
+.player {
+	position: absolute;
+	bottom: 40%;
+	padding: 50px 0;
+}
+.player__name {
+	font-size: 60px;
+	font-weight: 900;
+}
+
+.player--one {
+	left: 10%;
+}
+
+.player--two {
+	right: 10%;
+}
+
+.player__scrore {
+	font-size: 50px;
+	padding: 30px 0;
+}
+
+.player__scrore__current {
+	font-size: 30px;
+}
+
+.button__new, .button__roll, .button__hold {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%,0);
+}
+
+.button__new {
+	top: 20%;
+}
+
+.button__roll {
+	bottom: 20%;
+}
+
+.button__hold {
+	bottom: 10%;
+}
+
+.dice {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background: rgba(0,0,0,.5);
+	text-align: center;
+	height: 30px;
+	line-height: 30px;
+}
+
+footer a {
+	cursor: pointer;
+	color: #fff;
+	text-decoration: none;	
+}
+
+/* ------------------ media queries ---------------------- */
+
+@media (max-width: 900px){
+	
+	button {
+		border-radius: 0;
+		padding: 15px 0;
+	}
+	
+	.container{
+		height: 100vh;
+		text-align: center;
+	}
+	
+	.instruction {
+		display: none;
+		position: relative;
+		top: 0;
+		left: 0;
+		background-color: red;
+		z-index: 10;
+		padding: 30px 15px;
+		font-size: 16px;
+	}
+	
+	.button__instruction {
+		margin: 0;
+		width: 100%;
+	}
+	
+	.player {
+		position: absolute;
+		width: 40%;
+		display: inline-block;
+		top: 30%;
+	}
+	
+	.player__name {
+		font-size: 40px;
+	}
+	
+	.player__scrore {
+	font-size: 26px;
+	padding: 15px 0;
+	}
+
+	.player__scrore__current {
+		font-size: 18px;
+	}
+
+	.button__new, .button__roll, .button__hold {
+		width: 100%;
+
+	}
+
+	.button__new {
+		position: static;
+		top: 0;
+		transform: none;
+	}
+
+	.button__roll {
+		bottom: 84px;
+	}
+
+	.button__hold {
+		bottom: 30px;
+	}
+
+	.dice {
+		position: absolute;
+		width: 10%;
+		display: block;
+		margin: 0 auto;
+		top: 33%;
+		transform: translate(-50%,-50%);
+	}
+
+
+	
+}

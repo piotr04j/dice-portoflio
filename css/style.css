@@ -17,10 +17,11 @@ body {
 button {
 	min-width: 150px;
 	padding: 8px 15px;
-	background: red;
-	border: 2px solid #fff;
+	background: #333399;
+	border: 2px solid red;
 	border-radius: 20%;
 	color: #fff;
+	font-family: VT323;
 	font-size: 26px;
 	cursor: pointer;
 	outline: none;
@@ -57,7 +58,8 @@ button {
 /* ----------------- general ----------------------- */
 
 .container {
-	background: url('../img/bg.jpg') no-repeat center/cover;
+	background: #E6DADA;  /* fallback for old browsers */
+	background: linear-gradient(to top, #274046, #E6DADA);
 	height: 100vh;
 	position: relative;
 }
@@ -165,9 +167,9 @@ footer a {
 		height: 100%;
 		top: 0;
 		left: 0;
-		background-color: red;
+		background-color: #333399;
 		z-index: 10;
-		padding: 30px 15px;
+		padding: 30px;
 		font-size: 16px;
 	}
 	
@@ -178,7 +180,7 @@ footer a {
 	
 	.player {
 		position: absolute;
-		width: 40%;
+		width: 30%;
 		display: inline-block;
 		top: 30%;
 	}
@@ -188,12 +190,12 @@ footer a {
 	}
 	
 	.player__scrore {
-	font-size: 26px;
+	font-size: 30px;
 	padding: 15px 0;
 	}
 
 	.player__scrore__current {
-		font-size: 18px;
+		font-size: 22px;
 	}
 
 	.button__new, .button__roll, .button__hold {
@@ -217,13 +219,12 @@ footer a {
 
 	.dice {
 		position: absolute;
-		width: 10%;
+		width: 20%;
 		display: block;
 		margin: 0 auto;
-		top: 33%;
+		bottom: 10%;
 		transform: translate(-50%,-50%);
 	}
-
-
+	
 	
 }

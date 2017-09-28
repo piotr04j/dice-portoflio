@@ -33,7 +33,7 @@ btnHold.addEventListener('click', function(){
 	
 	score[activePayer] += currentScore;
 	document.getElementById('score-'+activePayer).innerHTML = score[activePayer];
-	if ( score[activePayer] >= 10){
+	if ( score[activePayer] >= 100){
 		document.getElementById('js-player-'+ activePayer).classList.add('winner');
 		document.getElementById('name-' + activePayer).textContent = 'Winner!';
 		btnHold.style.display = 'none';
@@ -68,6 +68,8 @@ function initGame(){
 	playerTwo.classList.remove('winner');
 	document.getElementById('score-0').innerHTML = 0;
 	document.getElementById('score-1').innerHTML = 0;
+	document.getElementById('name-0').textContent = 'player 1';
+	document.getElementById('name-1').textContent = 'player 2';
 	score = [0,0];
 	setCurrentDefault();
 	activePayer = 0;
